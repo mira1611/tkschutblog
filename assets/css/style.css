@@ -177,3 +177,8 @@ footer small{color:var(--ink-2);font-size:13px}
   .pager{grid-template-columns:1fr}
   .pager-link.next{grid-column:1}
 }
+
+/* Canh giữa phần đầu bài viết */
+.article-head{align-items:center;text-align:center}
+.article-head h1{max-width:24ch}
+.article-cover img{object-position:center}
