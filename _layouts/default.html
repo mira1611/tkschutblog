@@ -8,6 +8,10 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}tkschut blog{% endif %}">
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | escape }}{% else %}{{ site.description | escape }}{% endif %}">
 <meta property="og:image" content="{% if page.cover %}{{ page.cover }}{% else %}{{ '/images/tkschut.jpg' | absolute_url }}{% endif %}">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<meta name="theme-color" content="#C45F37">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@600&display=swap">
