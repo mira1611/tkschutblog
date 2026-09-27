@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article-head">
+    <p class="meta"><b>{{ page.category }}</b> · {{ page.date | date: '%d/%m/%Y' }} · {% include reading-time.html content=content %}</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  {% if page.cover %}
+  <figure class="article-cover"><img src="{{ page.cover }}" alt="" onerror="this.parentNode.remove()"></figure>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <aside class="author">
+    <img src="{{ '/images/tkschut.jpg' | relative_url }}" alt="Ảnh tkschut">
+    <div>
+      <p class="eyebrow">Người viết</p>
+      <p class="author-name">tkschut</p>
+      <p class="author-bio">Một người thích những con đường rợp bóng cây, những buổi chiều muộn hoàng hôn dần xa khuất và những câu chuyện truyền cảm hứng.</p>
+    </div>
+  </aside>
+
+  <nav class="pager" aria-label="Bài khác">
+    {% if page.previous %}
+    <a class="pager-link" href="{{ page.previous.url | relative_url }}"><span>← Bài cũ hơn</span>{{ page.previous.title }}</a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+    <a class="pager-link next" href="{{ page.next.url | relative_url }}"><span>Bài mới hơn →</span>{{ page.next.title }}</a>
+    {% endif %}
+  </nav>
+</article>

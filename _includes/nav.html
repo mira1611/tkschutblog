@@ -1,0 +1,9 @@
+<nav>
+  <a class="logo" href="{{ '/' | relative_url }}">tkschut</a>
+  <div class="links">
+    <a{% if page.url == '/' %} class="on"{% endif %} href="{{ '/' | relative_url }}">Trang chủ</a>
+    <a{% if page.layout == 'post' %} class="on"{% endif %} href="{{ '/' | relative_url }}#bai-viet">Bài viết</a>
+    <a href="{{ '/' | relative_url }}#ve-toi">Về tôi</a>
+    <a href="{{ '/' | relative_url }}#lien-he">Liên hệ</a>
+  </div>
+</nav>

@@ -1,0 +1,9 @@
+---
+title: "\"Đừng phí hoài tuổi trẻ\""
+date: 2024-01-22 08:00:00 +0700
+category: Sống chậm
+cover: "https://static.wixstatic.com/media/fe1c50_7dade7953c754018ae6b561268e6a8c0~mv2.jpg/v1/fill/w_735,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fe1c50_7dade7953c754018ae6b561268e6a8c0~mv2.jpg"
+excerpt: "Hôm nay khó khăn, ngày mai còn khó khăn hơn nhưng ngày kia sẽ là ngày tuyệt vời."
+---
+
+Một câu nói mà mình vô cùng tâm đắc, được viết trong cuốn đừng phí hoài tuổi trẻ của nhà sáng lập Sbook Nguyễn Anh Dũng. Đây không phải lần đầu mình đọc câu nói này, mà lần đầu mình đọc được câu nói này thì câu nói được in trên tấm bạc che nắng cho một quán bún riêu ven đường. Mình nhớ không lầm thì hôm đó là sáng thứ 2, mình chỉ vừa vào năm nhất đại học cách đó mấy tháng và đang sống một mình ở Sài Gòn, hôm đấy thức dậy mình thấy vô nghĩa lắm, vừa nhớ nhà vừa cảm giác trống rỗng, không biết làm gì tiếp theo, không biết phải học hành như thế nào, nói chung cảm thấy khó khăn vô cùng, cảm giác bế tắc khó tả. Mình ngủ đến trưa thì ra quán để ăn bún riêu, đang loay hoay thì mình đọc được câu nói này, bỗng dưng mình bị suy nghĩ, mình suy nghĩ rất nhiều, mình thấy rất hay sao đó ghi nhớ. Sau nhiều tháng vừa học vừa làm ở Sài Gòn mình đối đầu với nhiều khó khăn, nhiều áp lực, nhiều lần khiến mình khóc đến sưng cả mắt, vài lần vấp ngã, đến khi mình nhìn lại thì mọi chuyện cũng đã qua, cũng đã đâu vào đấy, tuy lúc đó có khó khăn thật, sau đó thì cũng vượt qua và mình có những ngày tháng tuyệt vời với nhiều sự trải nghiệm và học hỏi khác nhau. Đến tận bây giờ khi đọc được quyển sách này làm mình nhớ đến dòng chữ ở quán bún riêu đó, đúng thật nhỉ, cuộc đời cứ xoay vòng, hết khó khăn này lại đến thử thách khác, nhưng bạn đừng quá lo lắng như Jack Ma đã nói hôm nay khó khăn, ngày mai còn khó khăn hơn nhưng ngày kia sẽ là ngày tuyệt vời.

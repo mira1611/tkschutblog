@@ -1,0 +1,34 @@
+# Cấu hình blog tkschut
+title: tkschut
+description: Góp nhặt những buổi chiều dịu dàng vào áng văn vụng về.
+author: tkschut
+lang: vi
+
+# Blog dùng tên miền riêng (xem file CNAME)
+url: "https://tkschutblog.com"
+baseurl: ""
+
+timezone: Asia/Ho_Chi_Minh
+permalink: /bai-viet/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Các chủ đề hiện trên trang chủ (thêm hoặc đổi tên tuỳ ý)
+topics:
+  - Sống chậm
+  - Chuyến đi
+  - Tình yêu
+  - Khác
+
+# Mạng xã hội — thay bằng đường link trang cá nhân của bạn
+social:
+  facebook: "https://www.facebook.com/tkschut/"
+  tiktok: "https://www.tiktok.com/"
+  instagram: "https://www.instagram.com/tks.chut_/"
+
+exclude:
+  - README.md
+  - HUONG-DAN-DANG-BAI.md
+  - bai-mau.md

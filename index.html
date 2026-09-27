@@ -1,271 +1,88 @@
-<!doctype html>
-<html lang="vi">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>tkschut blog</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Be+Vietnam+Pro:wght@400;500;600&family=Dancing+Script:wght@600&display=swap">
-<style>
-:root{
-  --paper:#FBF2E8; --paper-2:#F5E4D3; --card:#FFF9F3;
-  --ink:#3B2A25; --ink-2:#7A5F55; --line:#E8D2C0;
-  --terra:#C45F37; --terra-ink:#FFF6EE; --rose:#E9A68C; --gold:#E8B25A; --dusk:#8C7BAA;
-  --sky-1:#F6C99E; --sky-2:#EFA184; --sky-3:#C9869A;
-  --serif:"Fraunces", Georgia, "Times New Roman", serif;
-  --sans:"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --hand:"Dancing Script", "Brush Script MT", cursive;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --paper:#1E1618; --paper-2:#281D20; --card:#2A1F22;
-    --ink:#F3E4D8; --ink-2:#C4A99C; --line:#44333A;
-    --terra:#E58A60; --terra-ink:#1E1618; --rose:#D78D78; --gold:#E2AE5C; --dusk:#A99BC6;
-    --sky-1:#5A3B4A; --sky-2:#7A4750; --sky-3:#3A2A42;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --paper:#1E1618; --paper-2:#281D20; --card:#2A1F22;
-  --ink:#F3E4D8; --ink-2:#C4A99C; --line:#44333A;
-  --terra:#E58A60; --terra-ink:#1E1618; --rose:#D78D78; --gold:#E2AE5C; --dusk:#A99BC6;
-  --sky-1:#5A3B4A; --sky-2:#7A4750; --sky-3:#3A2A42;
-}
-*{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;padding-inline:20px;padding-block:0}
-.wrap{max-width:1080px;margin:0 auto}
-a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;text-wrap:balance;margin:0}
-p{margin:0}
-.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);font-weight:600}
-:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
-
-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
-.logo{font-family:var(--hand);font-size:30px;color:var(--terra);text-decoration:none;line-height:1}
-.links{display:flex;gap:22px;font-size:15px;flex-wrap:wrap}
-.links a{text-decoration:none;color:var(--ink-2)}
-.links a:hover,.links a.on{color:var(--ink)}
-.links a.on{border-bottom:2px solid var(--terra)}
-
-.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding-block:36px 64px}
-.hero h1{font-size:clamp(38px,5.6vw,64px);font-weight:400;letter-spacing:-.01em;margin-block:14px 18px}
-.hero h1 em{font-style:italic;color:var(--terra)}
-.hero .lede{color:var(--ink-2);font-size:18px;max-width:46ch}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font:600 15px var(--sans);text-decoration:none;border:1.5px solid var(--terra);cursor:pointer;transition:transform .2s}
-.btn.solid{background:var(--terra);color:var(--terra-ink)}
-.btn.ghost{background:transparent;color:var(--terra)}
-.btn:hover{transform:translateY(-2px)}
-
-.frame{position:relative;max-width:400px;margin-left:auto;width:100%}
-.sky{position:absolute;inset:8% -6% -4% 6%;border-radius:220px 220px 28px 28px;background:linear-gradient(180deg,var(--sky-1),var(--sky-2) 55%,var(--sky-3));}
-.sun{position:absolute;width:92px;height:92px;border-radius:50%;background:var(--gold);right:-18px;top:22%;opacity:.95}
-.arch{position:relative;border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:3/4;max-width:100%;border:6px solid var(--card)}
-.arch img{width:100%;height:100%;object-fit:cover;display:block}
-.sign{position:absolute;left:-26px;bottom:26px;background:var(--card);padding:10px 18px;border-radius:14px;font-family:var(--hand);font-size:26px;color:var(--terra);transform:rotate(-4deg);border:1px solid var(--line)}
-
-.quote{background:var(--paper-2);border-radius:28px;padding:56px clamp(20px,5vw,64px);margin-block:8px 80px}
-.steps{display:grid;gap:6px;margin-top:22px}
-.step{font-family:var(--serif);font-size:clamp(22px,3.4vw,38px);line-height:1.25}
-.step span{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);display:block;margin-bottom:2px}
-.step:nth-child(1){color:var(--ink-2)}
-.step:nth-child(2){padding-left:8%;color:var(--ink-2)}
-.step:nth-child(3){padding-left:16%;color:var(--terra);font-style:italic}
-.quote .by{margin-top:26px;font-family:var(--hand);font-size:24px;color:var(--terra);text-align:right}
-
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
-.sec-head h2{font-size:clamp(28px,3.6vw,40px);font-weight:400}
-.note{font-size:13px;color:var(--ink-2)}
-
-.feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-bottom:56px}
-.feature .pic{min-height:280px;background:linear-gradient(160deg,var(--sky-1),var(--sky-2) 60%,var(--sky-3));position:relative}
-.feature .pic::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--gold);left:50%;bottom:-40px;transform:translateX(-50%)}
-.feature .body{padding:36px;display:flex;flex-direction:column;gap:12px;justify-content:center}
-.feature h3{font-size:28px}
-.meta{font-size:13px;color:var(--ink-2)}
-.meta b{color:var(--terra);font-weight:600}
-.feature p.ex{color:var(--ink-2)}
-.more{color:var(--terra);font-weight:600;text-decoration:none;font-size:15px}
-
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.chip{border:1px solid var(--line);background:transparent;color:var(--ink-2);padding:7px 16px;border-radius:999px;font:500 14px var(--sans);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--terra);border-color:var(--terra);color:var(--terra-ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;margin-bottom:88px}
-.post{display:flex;flex-direction:column;gap:10px;text-decoration:none}
-.thumb{aspect-ratio:4/3;border-radius:18px;max-width:100%;position:relative;overflow:hidden}
-.thumb::after{content:"";position:absolute;width:44%;aspect-ratio:1;border-radius:50%;left:28%;top:48%}
-.t1{background:var(--sky-1)}.t1::after{background:var(--terra)}
-.t2{background:var(--paper-2)}.t2::after{background:var(--dusk);top:30%}
-.t3{background:var(--rose)}.t3::after{background:var(--gold);top:60%}
-.t4{background:var(--paper-2)}.t4::after{background:var(--rose);top:40%}
-.t5{background:var(--sky-2)}.t5::after{background:var(--paper);top:55%}
-.t6{background:var(--gold)}.t6::after{background:var(--terra);top:36%}
-.post h3{font-size:21px;transition:color .2s}
-.post:hover h3{color:var(--terra)}
-
-.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center;margin-bottom:88px}
-.about .mini{border-radius:24px;overflow:hidden;aspect-ratio:1;max-width:320px;width:100%}
-.about .mini img{width:100%;height:100%;object-fit:cover;object-position:50% 72%;display:block}
-.about p{color:var(--ink-2);max-width:60ch;margin-top:14px}
-
-.letter{background:var(--terra);color:var(--terra-ink);border-radius:28px;padding:48px clamp(20px,5vw,56px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center;margin-bottom:72px}
-.letter h2{font-size:clamp(26px,3.4vw,36px);font-weight:400}
-.letter p{opacity:1;margin-top:8px}
-.letter form{display:flex;gap:10px;flex-wrap:wrap}
-.letter input{flex:1 1 200px;min-width:0;padding:13px 18px;border-radius:999px;border:0;font:15px var(--sans);background:var(--terra-ink);color:var(--terra)}
-.letter input::placeholder{color:var(--terra)}
-.letter button{padding:13px 22px;border-radius:999px;border:1.5px solid var(--terra-ink);background:transparent;color:var(--terra-ink);font:600 15px var(--sans);cursor:pointer}
-.msg{font-size:14px;margin-top:10px;min-height:1.4em}
-
-footer{border-top:1px solid var(--line);padding-block:40px 48px;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
-footer .logo{font-size:36px}
-.social{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-.soc{display:inline-flex;align-items:center;gap:10px;padding:11px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;transition:border-color .2s,transform .2s,color .2s}
-.soc svg{width:20px;height:20px;flex:none}
-.soc:hover{border-color:var(--terra);color:var(--terra);transform:translateY(-2px)}
-footer small{color:var(--ink-2);font-size:13px}
-
-@media (max-width:760px){
-  .hero,.feature,.about,.letter{grid-template-columns:1fr}
-  .hero{gap:40px;padding-block:16px 48px}
-  .frame{margin:0 auto;max-width:320px}
-  .sign{left:-8px}
-  .links{gap:14px;font-size:14px}
-  .about .mini{max-width:220px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <nav>
-    <a class="logo" href="#top">tkschut</a>
-    <div class="links">
-      <a class="on" href="#top">Trang chủ</a>
-      <a href="#bai-viet">Bài viết</a>
-      <a href="#ve-toi">Về tôi</a>
-      <a href="#lien-he">Liên hệ</a>
+---
+layout: default
+---
+<header class="hero" id="top">
+  <div>
+    <p class="eyebrow">Chào bạn, mình là tkschut</p>
+    <h1>Góp nhặt những <em>buổi chiều dịu dàng</em> vào áng văn vụng về</h1>
+    <p class="lede">Đây là nơi mà mình chia sẻ về cuộc sống, về hành trình lớn lên. Những câu chuyện về học tập và làm việc, tình yêu, đôi khi cũng là những câu chuyện truyền cảm hứng.</p>
+    <div class="cta">
+      <a class="btn solid" href="{{ site.posts.first.url | relative_url }}">Đọc bài mới nhất →</a>
+      <a class="btn ghost" href="#ve-toi">Về mình</a>
     </div>
-  </nav>
+  </div>
+  <div class="frame">
+    <div class="sky"></div>
+    <div class="sun"></div>
+    <div class="arch"><img src="{{ '/images/tkschut.jpg' | relative_url }}" alt="tkschut mặc áo hoodie xanh, ngước nhìn hàng thông trên con đường lát đá"></div>
+    <div class="sign">tkschut</div>
+  </div>
+</header>
 
-  <header class="hero" id="top">
-    <div>
-      <p class="eyebrow">Chào bạn, mình là tkschut</p>
-      <h1>Góp nhặt những <em>buổi chiều dịu dàng</em> vào áng văn vụng về</h1>
-      <p class="lede">Đây là nơi mà mình chia sẻ về cuộc sống, về hành trình lớn lên. Những câu chuyện về học tập và làm việc, tình yêu, đôi khi cũng là những câu chuyện truyền cảm hứng.</p>
-      <div class="cta">
-        <a class="btn solid" href="#bai-viet">Đọc bài mới nhất →</a>
-        <a class="btn ghost" href="#ve-toi">Về mình</a>
-      </div>
-    </div>
-    <div class="frame">
-      <div class="sky"></div>
-      <div class="sun"></div>
-      <div class="arch"><img src="images/tkschut.jpg" alt="tkschut mặc áo hoodie xanh, ngước nhìn hàng thông trên con đường lát đá"></div>
-      <div class="sign">tkschut</div>
-    </div>
-  </header>
+<section class="quote" aria-label="Câu nói yêu thích">
+  <p class="eyebrow">Câu nói mình mang theo</p>
+  <div class="steps">
+    <p class="step">Hôm nay khó khăn,</p>
+    <p class="step">ngày mai còn khó khăn hơn,</p>
+    <p class="step">nhưng ngày kia sẽ là ngày tuyệt vời.</p>
+  </div>
+  <p class="by">— Jack Ma</p>
+</section>
 
-  <section class="quote" aria-label="Câu nói yêu thích">
-    <p class="eyebrow">Câu nói mình mang theo</p>
-    <div class="steps">
-      <p class="step">Hôm nay khó khăn,</p>
-      <p class="step">ngày mai còn khó khăn hơn,</p>
-      <p class="step">nhưng ngày kia sẽ là ngày tuyệt vời.</p>
+<section id="bai-viet">
+  {% assign featured = site.posts.first %}
+  <div class="sec-head">
+    <h2>Bài mới nhất</h2>
+    <p class="note">{{ site.posts.size }} bài viết</p>
+  </div>
+  <article class="feature">
+    <a class="pic" href="{{ featured.url | relative_url }}" tabindex="-1" aria-hidden="true">{% if featured.cover %}<img src="{{ featured.cover }}" alt="" onerror="this.remove()">{% endif %}</a>
+    <div class="body">
+      <p class="meta"><b>{{ featured.category }}</b> · {{ featured.date | date: '%d/%m/%Y' }} · {% include reading-time.html content=featured.content %}</p>
+      <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
+      <p class="ex">{{ featured.excerpt | strip_html }}</p>
+      <a class="more" href="{{ featured.url | relative_url }}">Đọc tiếp →</a>
     </div>
-    <p class="by">— Jack Ma</p>
-  </section>
+  </article>
 
-  <section id="bai-viet">
-    <div class="sec-head">
-      <h2>Bài nổi bật</h2>
-      <p class="note">Bài viết mẫu, sẽ thay bằng nội dung của bạn</p>
-    </div>
-    <article class="feature">
-      <div class="pic" aria-hidden="true"></div>
-      <div class="body">
-        <p class="meta"><b>Chuyến đi</b> · 6 phút đọc</p>
-        <h3>Đà Lạt mùa mưa và bài học về việc đi chậm lại</h3>
-        <p class="ex">Có những buổi sáng sương phủ kín rừng thông, mình chỉ đứng yên ngước nhìn và nhận ra mình đã vội vàng quá lâu.</p>
-        <a class="more" href="#bai-viet">Đọc tiếp →</a>
-      </div>
-    </article>
+  <div class="sec-head"><h2>Tất cả bài viết</h2></div>
+  <div class="chips" role="group" aria-label="Lọc theo chủ đề">
+    <button class="chip" aria-pressed="true" data-f="all">Tất cả</button>
+    {% for t in site.topics %}<button class="chip" aria-pressed="false" data-f="{{ t }}">{{ t }}</button>
+    {% endfor %}
+  </div>
+  <div class="grid" id="grid">
+    {% for post in site.posts offset:1 %}
+    <a class="post" data-c="{{ post.category }}" href="{{ post.url | relative_url }}">
+      <div class="thumb t{{ forloop.index | modulo: 6 | plus: 1 }}">{% if post.cover %}<img src="{{ post.cover }}" alt="" loading="lazy" onerror="this.remove()">{% endif %}</div>
+      <p class="meta"><b>{{ post.category }}</b> · {{ post.date | date: '%d/%m/%Y' }}</p>
+      <h3>{{ post.title }}</h3>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="more-wrap"><button class="btn ghost" id="loadMore" type="button" hidden>Xem thêm bài viết</button></div>
+</section>
 
-    <div class="sec-head"><h2>Bài viết mới</h2></div>
-    <div class="chips" role="group" aria-label="Lọc theo chủ đề">
-      <button class="chip" aria-pressed="true" data-f="all">Tất cả</button>
-      <button class="chip" aria-pressed="false" data-f="song">Sống chậm</button>
-      <button class="chip" aria-pressed="false" data-f="di">Chuyến đi</button>
-      <button class="chip" aria-pressed="false" data-f="yeu">Tình yêu</button>
-      <button class="chip" aria-pressed="false" data-f="khac">Khác</button>
-    </div>
-    <div class="grid" id="grid">
-      <a class="post" data-c="song" href="#bai-viet"><div class="thumb t1"></div><p class="meta"><b>Sống chậm</b> · 4 phút đọc</p><h3>Một ly cà phê không cầm điện thoại</h3></a>
-      <a class="post" data-c="khac" href="#bai-viet"><div class="thumb t2"></div><p class="meta"><b>Khác</b> · 5 phút đọc</p><h3>Những ngày khó khăn rồi cũng qua</h3></a>
-      <a class="post" data-c="di" href="#bai-viet"><div class="thumb t3"></div><p class="meta"><b>Chuyến đi</b> · 7 phút đọc</p><h3>Hoàng hôn ở Phú Quốc và lời hứa với chính mình</h3></a>
-      <a class="post" data-c="yeu" href="#bai-viet"><div class="thumb t4"></div><p class="meta"><b>Tình yêu</b> · 4 phút đọc</p><h3>Thương một người cũng là học cách thương mình</h3></a>
-      <a class="post" data-c="song" href="#bai-viet"><div class="thumb t5"></div><p class="meta"><b>Sống chậm</b> · 4 phút đọc</p><h3>Viết nhật ký năm dòng mỗi tối</h3></a>
-      <a class="post" data-c="di" href="#bai-viet"><div class="thumb t6"></div><p class="meta"><b>Chuyến đi</b> · 6 phút đọc</p><h3>Đi một mình lần đầu tiên</h3></a>
-    </div>
-  </section>
+<section class="about" id="ve-toi">
+  <div class="mini"><img src="{{ '/images/tkschut.jpg' | relative_url }}" alt="Ảnh tkschut"></div>
+  <div>
+    <p class="eyebrow">Về mình</p>
+    <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:400;margin-top:10px">Mình là tkschut</h2>
+    <p>Một người thích những con đường rợp bóng cây, những buổi chiều muộn hoàng hôn dần xa khuất và những câu chuyện truyền cảm hứng. Hẹn gặp bạn ở trong những bài blog.</p>
+  </div>
+</section>
 
-  <section class="about" id="ve-toi">
-    <div class="mini"><img src="images/tkschut.jpg" alt="Ảnh tkschut"></div>
-    <div>
-      <p class="eyebrow">Về mình</p>
-      <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:400;margin-top:10px">Mình là tkschut</h2>
-      <p>Một người thích những con đường rợp bóng cây, những buổi chiều muộn hoàng hôn dần xa khuất và những câu chuyện truyền cảm hứng. Hẹn gặp bạn ở trong những bài blog.</p>
-    </div>
-  </section>
-
-  <section class="letter" id="lien-he">
-    <div>
-      <h2>Thư chiều Chủ nhật</h2>
-      <p>Mỗi tuần một bài viết và một lời nhắn nhủ nhỏ, gửi thẳng đến hộp thư của bạn.</p>
-    </div>
-    <div>
-      <form id="sub" novalidate>
-        <label for="email" style="position:absolute;left:-9999px">Email</label>
-        <input id="email" type="email" placeholder="ban@email.com">
-        <button type="submit">Đăng ký</button>
-      </form>
-      <p class="msg" id="msg" aria-live="polite"></p>
-    </div>
-  </section>
-
-  <footer>
-    <a class="logo" href="#top">tkschut</a>
-    <div class="social">
-      <a class="soc" href="https://https://www.facebook.com/tkschut/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3z"/></svg>Facebook</a>
-      <a class="soc" href="https://www.tiktok.com/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3h-3.1v12.3a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .8.1V9.5a5.9 5.9 0 1 0 5 5.8V9.1a7.4 7.4 0 0 0 4.2 1.3V7.3A4.3 4.3 0 0 1 16.6 3z"/></svg>TikTok</a>
-      <a class="soc" href="https://https://www.instagram.com/tks.chut_//" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a>
-    </div>
-    <small>© 2026 tkschut · Viết bằng cả trái tim</small>
-  </footer>
-</div>
-
-<script>
-document.querySelectorAll('.chip').forEach(function(c){
-  c.addEventListener('click',function(){
-    document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
-    c.setAttribute('aria-pressed','true');
-    var f=c.dataset.f;
-    document.querySelectorAll('#grid .post').forEach(function(p){p.hidden=!(f==='all'||p.dataset.c===f)});
-  });
-});
-document.getElementById('sub').addEventListener('submit',function(e){
-  e.preventDefault();
-  var v=document.getElementById('email').value.trim(), m=document.getElementById('msg');
-  m.textContent=/^\S+@\S+\.\S+$/.test(v)?'Cảm ơn bạn! Hẹn gặp bạn vào chiều Chủ nhật.':'Email chưa đúng, bạn kiểm tra lại giúp mình nhé.';
-});
-document.getElementById('email').addEventListener('input',function(){document.getElementById('msg').textContent=''});
-</script>
-
-</body>
-</html>
+<section class="letter" id="lien-he">
+  <div>
+    <h2>Thư chiều Chủ nhật</h2>
+    <p>Mỗi tuần một bài viết và một lời nhắn nhủ nhỏ, gửi thẳng đến hộp thư của bạn.</p>
+  </div>
+  <div>
+    <form id="sub" novalidate>
+      <label for="email" style="position:absolute;left:-9999px">Email</label>
+      <input id="email" type="email" placeholder="ban@email.com">
+      <button type="submit">Đăng ký</button>
+    </form>
+    <p class="msg" id="msg" aria-live="polite"></p>
+  </div>
+</section>

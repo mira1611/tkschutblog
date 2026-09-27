@@ -1,0 +1,9 @@
+---
+title: "That's my faults"
+date: 2024-01-26 08:00:00 +0700
+category: Tình yêu
+cover: "https://static.wixstatic.com/media/fe1c50_541b8e016bec423893bf755f3531f0a5~mv2.jpg/v1/fit/w_1000,h_1000,al_c,q_85/fe1c50_541b8e016bec423893bf755f3531f0a5~mv2.jpg"
+excerpt: "Một bông hồng đẹp nhưng lại có gai, nó khiến những người yêu thích nó cầm vào lại bị chảy máu."
+---
+
+Và mãi mãi sẽ không bao giờ hiểu hết về tình yêu, rồi bạn cũng sẽ làm tổn thương một ai đó mà bạn sẽ không thể ngờ tới, rồi bạn cũng sẽ trở thành một kẻ xấu, một người làm người khác khóc. Không phải ai cũng đóng mãi một vai là nạn nhân cả, và đến khi đóng vai kẻ làm tổn thương người khác thì bạn mới hiểu rõ nhưng lí do, những suy nghĩ những diễn biến mà người làm tổn thương người khác gây ra. Tổn thương có rất nhiều loại khác nhau, đáng trách nhất là làm tổn thương người mà mình yêu thương nhất và người đó cũng rất yêu thương mình, vậy lí do để làm tổn thương họ là gì? chẳng có lí do gì cả vì đã yêu thương rồi thì lúc nào cũng muốn họ được hạnh phúc, có đúng không? vậy tại sao họ lại tổn thương cơ chứ. Một bông hồng đẹp nhưng lại có gai, nó khiến những người yêu thích nó cầm vào lại bị chảy máu, vậy chứng tỏ nó rất ghét những cái gai của mình, nhiều lần nó muốn loại bỏ hết những cái gai đó trên người mình nhưng lại bất thành vì nó không thể, những người yêu thương nó cũng vì nó mà ở lại bẻ từng nhánh gai đến chảy máu nhưng vẫn miệt mài ở đó. Nhưng làm sao có thể bẻ hết gai của bông hồng, không nhành bông này thì cũng nhành bông khác. Mãi cứ như vậy, nó đã làm người nó yêu thương và cũng yêu thương nó tổn thương từ lần này đến lần khác, nhưng nếu không có họ nó sẽ rất buồn và ngược lại. Bông hồng luôn tự dằn vặt bản thân mình còn họ thì vẫn miệt mài lặt gai để ở bên cạnh, luôn cảm thấy lỗi lầm quay quanh và bông hồng chẳng biết làm sao cả, chẳng còn dám đối mặt.
