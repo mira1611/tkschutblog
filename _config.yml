@@ -28,7 +28,12 @@ social:
   tiktok: "https://www.tiktok.com/"
   instagram: "https://www.instagram.com/tks.chut_/"
 
+# Thu email "Thư chiều Chủ nhật" vào Google Sheet.
+# Dán đường link Web app (kết thúc bằng /exec) vào giữa hai dấu ngoặc kép.
+newsletter_sheet_url: ""
+
 exclude:
+  - google-sheet
   - README.md
   - HUONG-DAN-DANG-BAI.md
   - bai-mau.md

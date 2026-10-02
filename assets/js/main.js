@@ -39,13 +39,35 @@
   var form = document.getElementById('sub');
   if (form) {
     var email = document.getElementById('email');
+    var trap = document.getElementById('website');
     var msg = document.getElementById('msg');
+    var btnSub = form.querySelector('button');
+    var endpoint = form.dataset.endpoint;
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var v = email.value.trim();
-      msg.textContent = /^\S+@\S+\.\S+$/.test(v)
-        ? 'Cảm ơn bạn! Hẹn gặp bạn vào chiều Chủ nhật.'
-        : 'Email chưa đúng, bạn kiểm tra lại giúp mình nhé.';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
+        msg.textContent = 'Email chưa đúng, bạn kiểm tra lại giúp mình nhé.';
+        email.focus();
+        return;
+      }
+      if (!endpoint) {
+        msg.textContent = 'Cảm ơn bạn! Hẹn gặp bạn vào chiều Chủ nhật.';
+        return;
+      }
+      btnSub.disabled = true;
+      msg.textContent = 'Đang gửi…';
+      var body = new URLSearchParams({ email: v, website: trap ? trap.value : '', trang: location.href });
+      fetch(endpoint, { method: 'POST', mode: 'no-cors', body: body })
+        .then(function () {
+          msg.textContent = 'Cảm ơn bạn đã đăng ký! Hẹn gặp bạn vào chiều Chủ nhật.';
+          form.reset();
+        })
+        .catch(function () {
+          msg.textContent = 'Chưa gửi được, bạn kiểm tra mạng rồi thử lại nhé.';
+        })
+        .finally(function () { btnSub.disabled = false; });
     });
     email.addEventListener('input', function () { msg.textContent = ''; });
   }

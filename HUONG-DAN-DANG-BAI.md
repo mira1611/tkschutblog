@@ -97,3 +97,19 @@ Mở file **`_config.yml`**:
 - Vào tab **Actions** của repo. Nếu thấy dấu ❌ đỏ, bấm vào để xem lỗi.
 - Lỗi thường gặp nhất là thiếu một trong hai dòng `---` ở đầu và cuối phần thông tin, hoặc thiếu dấu ngoặc kép trong `title`.
 - Nếu tiêu đề có dấu ngoặc kép bên trong, hãy viết `\"`. Ví dụ: `title: "\"Vừa đủ\""`.
+
+---
+
+## Thu email đăng ký "Thư chiều Chủ nhật" vào Google Sheet
+
+1. Vào sheets.google.com và tạo một bảng tính mới, đặt tên tuỳ ý (ví dụ "Đăng ký blog").
+2. Trên thanh menu, bấm **Tiện ích mở rộng → Apps Script** (tiếng Anh: Extensions → Apps Script).
+3. Xoá hết đoạn code có sẵn, dán toàn bộ nội dung file `google-sheet/dang-ky-email.gs` vào, rồi bấm biểu tượng 💾 để lưu.
+4. Bấm **Triển khai → Tùy chọn triển khai mới** (Deploy → New deployment). Ở biểu tượng bánh răng, chọn **Ứng dụng web** (Web app).
+   - Thực thi dưới dạng (Execute as): **Tôi** (Me)
+   - Người có quyền truy cập (Who has access): **Bất kỳ ai** (Anyone)
+5. Bấm **Triển khai** (Deploy) → **Cấp quyền truy cập** → chọn tài khoản Google của bạn. Nếu Google báo "ứng dụng chưa được xác minh", bấm **Nâng cao → Đi tới … (không an toàn)** → **Cho phép**. Đây là code của chính bạn nên an toàn.
+6. Chép **URL ứng dụng web** (có đuôi `/exec`).
+7. Mở file `_config.yml` trong repo, dán URL đó vào dòng `newsletter_sheet_url: ""`, giữa hai dấu ngoặc kép, rồi bấm Commit.
+
+Từ đó, mỗi người đăng ký sẽ thêm một dòng vào trang tính **Đăng ký**, gồm thời gian, email và trang họ đăng ký. Email trùng sẽ không bị ghi hai lần.
