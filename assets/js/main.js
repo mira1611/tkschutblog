@@ -1,3 +1,6 @@
+---
+# Jekyll xử lý file này để lấy link Google Sheet từ _config.yml
+---
 (function () {
   var grid = document.getElementById('grid');
   if (grid) {
@@ -42,7 +45,7 @@
     var trap = document.getElementById('website');
     var msg = document.getElementById('msg');
     var btnSub = form.querySelector('button');
-    var endpoint = form.dataset.endpoint;
+    var endpoint = form.dataset.endpoint || '{{ site.newsletter_sheet_url }}';
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
