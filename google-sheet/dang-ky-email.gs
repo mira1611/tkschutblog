@@ -43,3 +43,13 @@ function phanHoi(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
 }
+
+/** Mở link /exec trên trình duyệt: thấy chữ "OK" là ứng dụng web đang chạy. */
+function doGet() {
+  return ContentService.createTextOutput('OK – tkschut blog');
+}
+
+/** Chọn hàm này và bấm ▶ Chạy trong Apps Script để thử ghi một dòng vào Sheet. */
+function thuNghiem() {
+  doPost({ parameter: { email: 'thu-nghiem@example.com', trang: 'chạy thử trong Apps Script' } });
+}
