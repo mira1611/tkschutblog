@@ -201,3 +201,11 @@ footer small{color:var(--ink-2);font-size:13px}
   .about .mini{max-width:280px;margin-inline:auto}
   .about > div:last-child{justify-self:stretch}
 }
+
+/* Câu nói: dòng 3 cùng kiểu chữ (không nghiêng), mỗi vế nằm gọn trên 1 hàng ở điện thoại */
+.step:nth-child(3){font-style:normal}
+@media (max-width:760px){
+  .quote{padding:36px 20px}
+  .steps{container-type:inline-size}
+  .step{font-size:min(22px,5.8cqi);white-space:nowrap;text-wrap:nowrap}
+}
