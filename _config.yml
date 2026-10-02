@@ -32,6 +32,12 @@ social:
 # Dán đường link Web app (kết thúc bằng /exec) vào giữa hai dấu ngoặc kép.
 newsletter_sheet_url: "https://script.google.com/macros/s/AKfycbzF0MvUPzxgdd9oOSyrJha1sCd4djJmfUQLpo5mHMemQy3su_s90WNHkVftgFUvLjJq/exec"
 
+# Thống kê lượt xem (điền một trong hai, để trống nếu không dùng)
+# GoatCounter: điền mã trang, ví dụ "tkschut" nếu trang thống kê là tkschut.goatcounter.com
+goatcounter_code: ""
+# Google Analytics: điền Measurement ID, dạng "G-XXXXXXXXXX"
+google_analytics_id: ""
+
 exclude:
   - google-sheet
   - README.md
