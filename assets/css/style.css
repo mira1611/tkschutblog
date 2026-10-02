@@ -182,3 +182,13 @@ footer small{color:var(--ink-2);font-size:13px}
 .article-head{align-items:center;text-align:center}
 .article-head h1{max-width:24ch}
 .article-cover img{object-position:center}
+
+/* Câu nói: trên điện thoại cho 3 dòng thẳng hàng, không thụt bậc */
+.step{text-wrap:balance}
+@media (max-width:760px){
+  .quote{padding:40px 24px}
+  .steps{gap:4px}
+  .step{font-size:22px;line-height:1.35}
+  .step:nth-child(2),.step:nth-child(3){padding-left:0}
+  .quote .by{text-align:left;margin-top:20px}
+}
