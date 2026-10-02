@@ -192,3 +192,12 @@ footer small{color:var(--ink-2);font-size:13px}
   .step:nth-child(2),.step:nth-child(3){padding-left:0}
   .quote .by{text-align:left;margin-top:20px}
 }
+
+/* Ảnh phần "Về mình" */
+.about .mini{aspect-ratio:4/5}
+.about .mini img{object-position:50% 70%}
+@media (max-width:760px){
+  .about{justify-items:center;gap:32px}
+  .about .mini{max-width:280px;margin-inline:auto}
+  .about > div:last-child{justify-self:stretch}
+}
