@@ -50,16 +50,18 @@
     - /images/hanh-trinh/son-tra-5.jpg
     - /images/hanh-trinh/son-tra-6.jpg
 
-- ten: Sài Gòn
-  thoi_gian: Mùa hoa kèn hồng · 2026
-  anh:
-    - https://static.wixstatic.com/media/fe1c50_7ccaae15240d4511a81db671ad4482ef~mv2.jpg/v1/fill/w_667,h_1000,al_c,q_80/fe1c50_7ccaae15240d4511a81db671ad4482ef~mv2.jpg
-    - https://static.wixstatic.com/media/fe1c50_05ef7d9705bb4dad8e3c7d6c12db6dcf~mv2.png/v1/fill/w_900,h_588,al_c,q_80/fe1c50_05ef7d9705bb4dad8e3c7d6c12db6dcf~mv2.png
-
 - ten: Đà Lạt
   thoi_gian: Rừng thông
   anh:
     - /images/tkschut.jpg
+
+- ten: Sài Gòn
+  thoi_gian: 2025
+  anh:
+    - /images/hanh-trinh/sai-gon-1.jpg
+    - /images/hanh-trinh/sai-gon-2.jpg
+    - /images/hanh-trinh/sai-gon-3.jpg
+    - /images/hanh-trinh/sai-gon-4.jpg
 
 - ten: Hà Nội
   thoi_gian: Tháng 7 · 2025
