@@ -124,8 +124,6 @@ Từ đó, mỗi người đăng ký sẽ thêm một dòng vào trang tính **�
 ```
 - ten: Hội An
   thoi_gian: Tháng 6 · 2026
-  ghi_chu: Phố cổ vàng ươm và hoa giấy nở rộ.
-  bai_viet: /bai-viet/minh-den-da-nang-de-gap-son-tra/
   anh:
     - /images/hanh-trinh/hoi-an-1.jpg
     - /images/hanh-trinh/hoi-an-2.jpg
@@ -134,4 +132,4 @@ Từ đó, mỗi người đăng ký sẽ thêm một dòng vào trang tính **�
 
 3. Bấm **Commit changes**. Trang nằm trên cùng danh sách sẽ hiện ra đầu tiên.
 
-Dòng `bai_viet` không bắt buộc, có thì trang sẽ hiện nút "Đọc chuyện →". Ảnh được sắp ngẫu nhiên mỗi lần mở trang.
+Ảnh được sắp ngẫu nhiên mỗi lần mở trang.

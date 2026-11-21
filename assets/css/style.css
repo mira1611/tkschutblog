@@ -11,22 +11,6 @@ img{max-width:100%}
   --sans:"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
   --hand:"Dancing Script", "Brush Script MT", cursive;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --paper:#1E1618; --paper-2:#281D20; --card:#2A1F22;
-    --ink:#F3E4D8; --ink-2:#C4A99C; --line:#44333A;
-    --terra:#E58A60; --terra-ink:#1E1618; --rose:#D78D78; --gold:#E2AE5C; --dusk:#A99BC6;
-    --sky-1:#5A3B4A; --sky-2:#7A4750; --sky-3:#3A2A42;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --paper:#1E1618; --paper-2:#281D20; --card:#2A1F22;
-  --ink:#F3E4D8; --ink-2:#C4A99C; --line:#44333A;
-  --terra:#E58A60; --terra-ink:#1E1618; --rose:#D78D78; --gold:#E2AE5C; --dusk:#A99BC6;
-  --sky-1:#5A3B4A; --sky-2:#7A4750; --sky-3:#3A2A42;
-}
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;padding-inline:20px;padding-block:0}
 .wrap{max-width:1080px;margin:0 auto}

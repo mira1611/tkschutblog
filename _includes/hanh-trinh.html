@@ -20,10 +20,6 @@
         <figure class="jr-photo"><img src="{% if a contains '://' %}{{ a }}{% else %}{{ a | relative_url }}{% endif %}" alt="{{ p.ten }}" loading="lazy" draggable="false"></figure>
         {% endfor %}
       </div>
-      <div class="jr-bottom">
-        {% if p.ghi_chu %}<p class="jr-note">{{ p.ghi_chu }}</p>{% endif %}
-        {% if p.bai_viet %}<a class="jr-link" href="{{ p.bai_viet | relative_url }}">Đọc chuyện →</a>{% endif %}
-      </div>
     </article>
     {% endfor %}
   </div>
