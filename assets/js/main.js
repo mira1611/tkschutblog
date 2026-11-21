@@ -100,7 +100,12 @@
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
   pages.forEach(function (pg) {
-    var photos = Array.prototype.slice.call(pg.querySelectorAll('.jr-photo'));
+    var photos = shuffle(Array.prototype.slice.call(pg.querySelectorAll('.jr-photo')));
+    if (photos.length > 5) {
+      var keep = 3 + Math.floor(Math.random() * 3); // 3–5 tấm khi có nhiều ảnh
+      photos.slice(keep).forEach(function (ph) { ph.remove(); });
+      photos = photos.slice(0, keep);
+    }
     var k = Math.min(Math.max(photos.length, 1), 5);
     var options = LAYOUTS[k];
     var slots = shuffle(options[Math.floor(Math.random() * options.length)].slice());

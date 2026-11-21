@@ -118,7 +118,7 @@ Từ đó, mỗi người đăng ký sẽ thêm một dòng vào trang tính **�
 
 ## Thêm một trang vào sổ "Hành trình"
 
-1. Tải 2–5 ảnh của địa điểm lên thư mục **`images/hanh-trinh/`** (Add file → Upload files). Đặt tên không dấu, ví dụ `hoi-an-1.jpg`, `hoi-an-2.jpg`.
+1. Tải từ 2 ảnh trở lên của địa điểm lên thư mục **`images/hanh-trinh/`** (Add file → Upload files). Đặt tên không dấu, ví dụ `hoi-an-1.jpg`, `hoi-an-2.jpg`.
 2. Mở file **`_data/hanh_trinh.yml`**, bấm ✏️ và thêm một khối như sau (giữ đúng khoảng trắng đầu dòng):
 
 ```
@@ -132,4 +132,4 @@ Từ đó, mỗi người đăng ký sẽ thêm một dòng vào trang tính **�
 
 3. Bấm **Commit changes**. Trang nằm trên cùng danh sách sẽ hiện ra đầu tiên.
 
-Ảnh được sắp ngẫu nhiên mỗi lần mở trang.
+Có thể thêm nhiều hơn 5 tấm: mỗi lần mở trang, blog chọn ngẫu nhiên 3–5 tấm và sắp xếp lại vị trí, nên mỗi lần xem sẽ khác nhau.

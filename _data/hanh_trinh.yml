@@ -1,7 +1,17 @@
 # Những nơi mình đã đi qua — mỗi mục là một trang trong cuốn sổ "Hành trình".
 # ten: tên địa điểm · thoi_gian: hiện cạnh tên
-# anh: 2–5 tấm ảnh. Ảnh tải lên thư mục images/hanh-trinh/ rồi ghi đường dẫn như mẫu.
+# anh: 2 tấm trở lên. Mỗi lần mở trang, blog chọn ngẫu nhiên tối đa 5 tấm để hiện. Ảnh tải lên thư mục images/hanh-trinh/ rồi ghi đường dẫn như mẫu.
 # Trang đầu tiên trong danh sách sẽ hiện ra đầu tiên.
+
+- ten: Thái Lan
+  thoi_gian: Tháng 11 · 2026
+  anh:
+    - /images/hanh-trinh/thai-lan-1.jpg
+    - /images/hanh-trinh/thai-lan-2.jpg
+    - /images/hanh-trinh/thai-lan-3.jpg
+    - /images/hanh-trinh/thai-lan-4.jpg
+    - /images/hanh-trinh/thai-lan-5.jpg
+    - /images/hanh-trinh/thai-lan-6.jpg
 
 - ten: Đà Nẵng
   thoi_gian: Tháng 7 · 2026
