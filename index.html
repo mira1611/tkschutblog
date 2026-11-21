@@ -20,14 +20,18 @@ layout: default
   </div>
 </header>
 
-<section class="quote" aria-label="Câu nói yêu thích">
-  <p class="eyebrow">Câu nói mình mang theo</p>
-  <div class="steps">
-    <p class="step">Hôm nay khó khăn,</p>
-    <p class="step">ngày mai còn khó khăn hơn,</p>
-    <p class="step">nhưng ngày kia sẽ là ngày tuyệt vời.</p>
-  </div>
-  <p class="by">— Jack Ma</p>
+<section class="motto" aria-label="Câu nói mình mang theo">
+  <div class="motto-glow" aria-hidden="true"></div>
+  <blockquote class="motto-lines">
+    <p>Hôm nay khó khăn,</p>
+    <p>ngày mai còn khó khăn hơn,</p>
+    <p class="motto-hi">nhưng ngày kia sẽ là ngày tuyệt vời.</p>
+  </blockquote>
+  <p class="motto-by">— Jack Ma</p>
+  <svg class="motto-hills" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 108 Q70 92 140 96 T290 82 T440 74 T580 90 T720 76 T860 66 T1010 84 T1140 88 T1200 94 V160 H0Z" fill="#d4bcab" opacity=".7"/>
+    <path d="M0 132 C110 118 190 126 280 120 C380 112 430 100 520 108 C610 116 680 128 770 120 C860 112 930 104 1020 112 C1100 120 1160 126 1200 122 V160 H0Z" fill="#c4a794" opacity=".55"/>
+  </svg>
 </section>
 
 {% include hanh-trinh.html %}
