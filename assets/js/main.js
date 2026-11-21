@@ -255,3 +255,13 @@
   window.addEventListener('resize', render);
   render();
 })();
+
+/* Thanh chủ đề ở đầu trang: lọc sẵn danh sách bài theo chủ đề */
+(function () {
+  document.querySelectorAll('.topics a[data-topic]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var chip = document.querySelector('.chip[data-f="' + a.dataset.topic + '"]');
+      if (chip) chip.click();
+    });
+  });
+})();

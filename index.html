@@ -1,21 +1,22 @@
 ---
 layout: default
 ---
-<header class="hero" id="top">
-  <div>
-    <p class="eyebrow">Chào bạn, mình là tkschut</p>
-    <h1>Góp nhặt những <em>buổi chiều dịu dàng</em> vào áng văn vụng về</h1>
-    <p class="lede">Đây là nơi mà mình chia sẻ về cuộc sống, về hành trình lớn lên. Những câu chuyện về học tập và làm việc, tình yêu, đôi khi cũng là những câu chuyện truyền cảm hứng.</p>
-    <div class="cta">
-      <a class="btn solid" href="{{ site.posts.first.url | relative_url }}">Đọc bài mới nhất →</a>
-      <a class="btn ghost" href="#ve-toi">Về mình</a>
+<header class="cover" id="top">
+  <img class="cover-bg" src="{{ '/images/hero.jpg' | relative_url }}" alt="">
+  {% include nav.html %}
+  <div class="cover-id">
+    <img class="avatar" src="{{ '/images/avatar.jpg' | relative_url }}" alt="Ảnh đại diện của tkschut">
+    <div>
+      <h1 class="cover-name">tkschut</h1>
+      <span class="cover-rule" aria-hidden="true"></span>
+      <p class="cover-tag">Góp nhặt những buổi chiều dịu dàng vào áng văn vụng về</p>
     </div>
   </div>
-  <div class="frame">
-    <div class="sky"></div>
-    <div class="sun"></div>
-    <div class="arch"><img src="{{ '/images/tkschut.jpg' | relative_url }}" alt="tkschut mặc áo hoodie xanh, ngước nhìn hàng thông trên con đường lát đá"></div>
-    <div class="sign">tkschut</div>
+  <div class="topics" role="navigation" aria-label="Chủ đề bài viết">
+    <a href="#bai-viet" data-topic="Sống chậm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg>Sống chậm</a>
+    <a href="#bai-viet" data-topic="Chuyến đi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>Chuyến đi</a>
+    <a href="#bai-viet" data-topic="Tình yêu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>Tình yêu</a>
+    <a href="#bai-viet" data-topic="Khác"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2Z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7Z"/></svg>Khác</a>
   </div>
 </header>
 
