@@ -55,6 +55,15 @@
   anh:
     - /images/tkschut.jpg
 
+- ten: Hà Nội
+  thoi_gian: Tháng 12 · 2025
+  anh:
+    - /images/hanh-trinh/ha-noi-1.jpg
+    - /images/hanh-trinh/ha-noi-2.jpg
+    - /images/hanh-trinh/ha-noi-3.jpg
+    - /images/hanh-trinh/ha-noi-4.jpg
+    - /images/hanh-trinh/ha-noi-5.jpg
+
 - ten: Sài Gòn
   thoi_gian: 2025
   anh:
@@ -62,8 +71,3 @@
     - /images/hanh-trinh/sai-gon-2.jpg
     - /images/hanh-trinh/sai-gon-3.jpg
     - /images/hanh-trinh/sai-gon-4.jpg
-
-- ten: Hà Nội
-  thoi_gian: Tháng 7 · 2025
-  anh:
-    - https://static.wixstatic.com/media/fe1c50_cee4569739be4fb9b01df41667a3a205~mv2.jpg/v1/fill/w_750,h_1000,al_c,q_80/fe1c50_cee4569739be4fb9b01df41667a3a205~mv2.jpg
