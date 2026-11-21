@@ -99,6 +99,45 @@
   function rand(a, b) { return a + Math.random() * (b - a); }
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
+  // Mỗi ảnh giữ đúng tỉ lệ gốc (ngang ra ngang, dọc ra dọc), không bị cắt:
+  // khung ảnh được thu vừa vào ô của bố cục rồi đặt giữa ô.
+  var PAD_X = 12, PAD_Y = 26; // viền trắng polaroid: trái+phải, trên+dưới
+
+  function ratioOf(ph) {
+    var img = ph.querySelector('img');
+    return img && img.naturalWidth ? img.naturalWidth / img.naturalHeight : 0.75;
+  }
+
+  function assign(pg) {
+    var photos = pg._photos;
+    var slots = pg._layout.slice();
+    // Ghép ảnh với ô có hình dáng gần nhất: ảnh ngang nhất vào ô ngang nhất
+    if (photos.every(function (ph) { var i = ph.querySelector('img'); return i && i.naturalWidth; })) {
+      photos = photos.slice().sort(function (a, b) { return ratioOf(a) - ratioOf(b); });
+      slots.sort(function (a, b) { return a[2] / a[3] - b[2] / b[3]; });
+    }
+    photos.forEach(function (ph, i) { ph._slot = slots[i]; });
+  }
+
+  function place(pg) {
+    var box = pg.querySelector('.jr-collage');
+    var W = box.clientWidth, H = box.clientHeight;
+    if (!W || !H) return;
+    pg._photos.forEach(function (ph) {
+      var s = ph._slot;
+      if (!s) return;
+      var bw = s[2] / 100 * W, bh = s[3] / 100 * H;
+      var r = ratioOf(ph);
+      var iw = Math.min(bw - PAD_X, (bh - PAD_Y) * r);
+      var ih = iw / r;
+      var fw = iw + PAD_X, fh = ih + PAD_Y;
+      ph.style.width = fw.toFixed(1) + 'px';
+      ph.style.height = fh.toFixed(1) + 'px';
+      ph.style.left = (s[0] / 100 * W + (bw - fw) / 2 + ph._jx * W).toFixed(1) + 'px';
+      ph.style.top = (s[1] / 100 * H + (bh - fh) / 2 + ph._jy * H).toFixed(1) + 'px';
+    });
+  }
+
   pages.forEach(function (pg) {
     var photos = shuffle(Array.prototype.slice.call(pg.querySelectorAll('.jr-photo')));
     if (photos.length > 5) {
@@ -108,19 +147,23 @@
     }
     var k = Math.min(Math.max(photos.length, 1), 5);
     var options = LAYOUTS[k];
-    var slots = shuffle(options[Math.floor(Math.random() * options.length)].slice());
+    pg._layout = options[Math.floor(Math.random() * options.length)];
+    pg._photos = photos;
     photos.forEach(function (ph, i) {
-      var s = slots[i];
-      if (!s) { ph.hidden = true; return; }
-      ph.style.left = (s[0] + rand(-1.5, 1.5)) + '%';
-      ph.style.top = (s[1] + rand(-1.5, 1.5)) + '%';
-      ph.style.width = s[2] + '%';
-      ph.style.height = s[3] + '%';
+      ph._jx = rand(-0.012, 0.012);
+      ph._jy = rand(-0.012, 0.012);
       ph.style.zIndex = i + 1;
-      ph.style.setProperty('--r', rand(-5, 5).toFixed(1) + 'deg');
+      ph.style.setProperty('--r', rand(-4, 4).toFixed(1) + 'deg');
       ph.style.setProperty('--tr', rand(-8, 8).toFixed(1) + 'deg');
+      var img = ph.querySelector('img');
+      if (img && !img.complete) {
+        img.addEventListener('load', function () { assign(pg); place(pg); });
+      }
     });
+    assign(pg);
+    place(pg);
   });
+  window.addEventListener('resize', function () { pages.forEach(place); });
 
   var pos = 0;
   function width() { return pages[0].offsetWidth || 300; }
