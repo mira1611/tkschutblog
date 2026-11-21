@@ -21,6 +21,16 @@
     - /images/hanh-trinh/hue-3.jpg
     - /images/hanh-trinh/hue-4.jpg
 
+- ten: Bà Nà Hill
+  thoi_gian: Tháng 8 · 2026
+  anh:
+    - /images/hanh-trinh/ba-na-1.jpg
+    - /images/hanh-trinh/ba-na-2.jpg
+    - /images/hanh-trinh/ba-na-3.jpg
+    - /images/hanh-trinh/ba-na-4.jpg
+    - /images/hanh-trinh/ba-na-5.jpg
+    - /images/hanh-trinh/ba-na-6.jpg
+
 - ten: Đà Nẵng
   thoi_gian: Tháng 7 · 2026
   anh:
@@ -37,7 +47,6 @@
   thoi_gian: Rừng thông
   anh:
     - /images/tkschut.jpg
-    - /images/ve-minh.jpg
 
 - ten: Hà Nội
   thoi_gian: Tháng 7 · 2025
