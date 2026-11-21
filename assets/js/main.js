@@ -186,7 +186,7 @@
       pg.setAttribute('aria-hidden', Math.round(pos) === i ? 'false' : 'true');
     });
     var cur = Math.round(Math.min(Math.max(pos, 0), n - 1));
-    countEl.textContent = cur + 1;
+    if (countEl) countEl.textContent = cur + 1;
     prev.disabled = cur <= 0;
     next.disabled = cur >= n - 1;
   }
