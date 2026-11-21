@@ -1,0 +1,42 @@
+# Những nơi mình đã đi qua — mỗi mục là một trang trong cuốn sổ "Hành trình".
+# ten: tên địa điểm · thoi_gian: hiện dưới tên · ghi_chu: một câu ngắn
+# bai_viet: (không bắt buộc) đường link bài viết về chuyến đi
+# anh: 2–5 tấm ảnh. Ảnh tải lên thư mục images/hanh-trinh/ rồi ghi đường dẫn như mẫu.
+# Trang đầu tiên trong danh sách sẽ hiện ra đầu tiên.
+
+- ten: Đà Nẵng
+  thoi_gian: Tháng 7 · 2026
+  ghi_chu: Hai tuần công tác, đủ lâu để nhớ từng cung đường.
+  bai_viet: /bai-viet/chuyen-cong-tac-xa-tan-2-tuan/
+  anh:
+    - https://static.wixstatic.com/media/fe1c50_a9d45384839a4fe784122b5fb124cce0~mv2.jpg/v1/fill/w_700,h_933,al_c,q_80/fe1c50_a9d45384839a4fe784122b5fb124cce0~mv2.jpg
+    - https://static.wixstatic.com/media/fe1c50_bb60f64bee6e43748fdf87df55c91d1c~mv2.png/v1/fill/w_700,h_933,al_c,q_80/fe1c50_bb60f64bee6e43748fdf87df55c91d1c~mv2.png
+
+- ten: Huế
+  thoi_gian: 2026
+  ghi_chu: Phố cổ kính, sông Hương lặng lẽ.
+  bai_viet: /bai-viet/lam-leader-tuoi-22/
+  anh:
+    - /images/hue.jpg
+
+- ten: Sài Gòn
+  thoi_gian: Mùa hoa kèn hồng · 2026
+  ghi_chu: Sài Gòn khoác thêm chiếc áo mộng mơ.
+  bai_viet: /bai-viet/mua-hoa-ken-hong/
+  anh:
+    - https://static.wixstatic.com/media/fe1c50_7ccaae15240d4511a81db671ad4482ef~mv2.jpg/v1/fill/w_667,h_1000,al_c,q_80/fe1c50_7ccaae15240d4511a81db671ad4482ef~mv2.jpg
+    - https://static.wixstatic.com/media/fe1c50_05ef7d9705bb4dad8e3c7d6c12db6dcf~mv2.png/v1/fill/w_900,h_588,al_c,q_80/fe1c50_05ef7d9705bb4dad8e3c7d6c12db6dcf~mv2.png
+
+- ten: Đà Lạt
+  thoi_gian: Rừng thông
+  ghi_chu: Những con đường rợp bóng cây.
+  anh:
+    - /images/tkschut.jpg
+    - /images/ve-minh.jpg
+
+- ten: Hà Nội
+  thoi_gian: Tháng 7 · 2025
+  ghi_chu: Hẹn trở lại vào một mùa thu nào đó.
+  bai_viet: /bai-viet/thang-7-thang-cua-nhung-dieu-moi-me/
+  anh:
+    - https://static.wixstatic.com/media/fe1c50_cee4569739be4fb9b01df41667a3a205~mv2.jpg/v1/fill/w_750,h_1000,al_c,q_80/fe1c50_cee4569739be4fb9b01df41667a3a205~mv2.jpg

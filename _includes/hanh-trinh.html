@@ -1,0 +1,35 @@
+{% assign places = site.data.hanh_trinh %}
+<section class="journey" id="hanh-trinh" aria-roledescription="carousel" aria-label="Những nơi mình đã đi qua">
+  <div class="sec-head journey-head">
+    <div>
+      <p class="eyebrow">Hành trình</p>
+      <h2>Những nơi mình đã đi qua</h2>
+    </div>
+    <p class="note"><span class="jr-count">1</span> / {{ places.size }} trang · vuốt để lật</p>
+  </div>
+
+  <div class="jr-stage" tabindex="0">
+    {% for p in places %}
+    <article class="jr-page" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ places.size }}: {{ p.ten }}">
+      <div class="jr-top">
+        <h3 class="jr-place">{{ p.ten }}</h3>
+        {% if p.thoi_gian %}<p class="jr-time">{{ p.thoi_gian }}</p>{% endif %}
+      </div>
+      <div class="jr-collage" data-n="{{ p.anh.size }}">
+        {% for a in p.anh limit:5 %}
+        <figure class="jr-photo"><img src="{% if a contains '://' %}{{ a }}{% else %}{{ a | relative_url }}{% endif %}" alt="{{ p.ten }}" loading="lazy" draggable="false"></figure>
+        {% endfor %}
+      </div>
+      <div class="jr-bottom">
+        {% if p.ghi_chu %}<p class="jr-note">{{ p.ghi_chu }}</p>{% endif %}
+        {% if p.bai_viet %}<a class="jr-link" href="{{ p.bai_viet | relative_url }}">Đọc chuyện →</a>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="jr-controls">
+    <button class="jr-btn jr-prev" type="button" aria-label="Trang trước">‹</button>
+    <button class="jr-btn jr-next" type="button" aria-label="Trang sau">›</button>
+  </div>
+</section>

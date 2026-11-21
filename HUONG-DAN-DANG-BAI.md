@@ -113,3 +113,25 @@ Mở file **`_config.yml`**:
 7. Mở file `_config.yml` trong repo, dán URL đó vào dòng `newsletter_sheet_url: ""`, giữa hai dấu ngoặc kép, rồi bấm Commit.
 
 Từ đó, mỗi người đăng ký sẽ thêm một dòng vào trang tính **Đăng ký**, gồm thời gian, email và trang họ đăng ký. Email trùng sẽ không bị ghi hai lần.
+
+---
+
+## Thêm một trang vào sổ "Hành trình"
+
+1. Tải 2–5 ảnh của địa điểm lên thư mục **`images/hanh-trinh/`** (Add file → Upload files). Đặt tên không dấu, ví dụ `hoi-an-1.jpg`, `hoi-an-2.jpg`.
+2. Mở file **`_data/hanh_trinh.yml`**, bấm ✏️ và thêm một khối như sau (giữ đúng khoảng trắng đầu dòng):
+
+```
+- ten: Hội An
+  thoi_gian: Tháng 6 · 2026
+  ghi_chu: Phố cổ vàng ươm và hoa giấy nở rộ.
+  bai_viet: /bai-viet/minh-den-da-nang-de-gap-son-tra/
+  anh:
+    - /images/hanh-trinh/hoi-an-1.jpg
+    - /images/hanh-trinh/hoi-an-2.jpg
+    - /images/hanh-trinh/hoi-an-3.jpg
+```
+
+3. Bấm **Commit changes**. Trang nằm trên cùng danh sách sẽ hiện ra đầu tiên.
+
+Dòng `bai_viet` không bắt buộc, có thì trang sẽ hiện nút "Đọc chuyện →". Ảnh được sắp ngẫu nhiên mỗi lần mở trang.
