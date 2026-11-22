@@ -1,12 +1,12 @@
 ---
-title: "Hà Lam"
+title: "Chuyện tình thị trấn"
 date: 2026-11-22 10:00:00 +0700
 category: Khác
 cover: "/images/ha-lam.jpg"
-excerpt: "Trong năm đó chẳng biết chú Tiêu đã đi đâu. Cô Tuyết chắc phải là người ngỡ ngàng nhất."
+excerpt: "Hà Lam – trong năm đó chẳng biết chú Tiêu đã đi đâu. Cô Tuyết chắc phải là người ngỡ ngàng nhất."
 ---
 
-Trong năm đó chẳng biết chú Tiêu đã đi đâu. Cô Tuyết chắc phải là người ngỡ ngàng nhất bởi vì cô từng là người thương, người tình và là người vợ sắp cưới của chú Tiêu.
+Hà Lam – trong năm đó chẳng biết chú Tiêu đã đi đâu. Cô Tuyết chắc phải là người ngỡ ngàng nhất bởi vì cô từng là người thương, người tình và là người vợ sắp cưới của chú Tiêu.
 
 Nhưng trớ trêu thay, tại làng Hà Nam đó cô Tuyết và chú Tiêu chưa từng nhìn lấy nhau một lần. Cô Tuyết chỉ lặng lẽ mỗi chiều gần tối dọn hàng ra bán mồi nhậu, xéo xéo quán rượu của chú Tiêu.
 
